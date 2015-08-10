@@ -19,5 +19,6 @@
 # not easily undoable.
 
 class ieee1394::no {
-    include "ieee1394::no::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "ieee1394::no::${lower_osfamily}"
 }
